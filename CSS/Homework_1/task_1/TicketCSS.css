@@ -1,0 +1,56 @@
+body {
+    background-color: #595959;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+p {
+    color: #adafac;
+}
+
+table {
+    font-size: 11px;
+    position: relative;
+    right: 5px;
+    bottom: 5px;
+}
+
+td {
+    width: 80px;
+}
+
+.first {
+    color: #FFF8F3;
+    font-style: italic;
+    vertical-align: top;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.second {
+    bottom: 4px;
+    position: relative;
+}
+
+.warning {
+    color: #F6F0B5;
+}
+
+.danger {
+    color: red;
+    position: relative;
+    top: 2px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.standard {
+    color: #BFBDBC;
+}
+
+.orange-text {
+    color: #D26A1B;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.point {
+    top: 3px;
+    position: relative;
+}

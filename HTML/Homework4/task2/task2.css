@@ -1,0 +1,25 @@
+header h1 {
+    position: relative;
+    left: 300px;
+	bottom: 50px;
+}
+
+header img {
+	position: relative;
+	max-height: 70px;
+	max-width: 150px;
+	top:25px
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+td {
+    text-align: center;
+}
+

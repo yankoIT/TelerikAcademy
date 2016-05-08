@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid Component</title>
+    <style>
+       table {
+          border-collapse: collapse;
+       }
+       .table, th, td {
+          border: 1px solid #d2d5d9;
+       }
+       .data-row{
+          padding: 3px;
+          padding-left: 4px;
+       }
+       body{
+          font: 12px Arial;
+       }
+       td{
+           height: 20px;
+       }
+       .header{
+          background-color: #f0f1f2;
+          padding: 2px;
+       }
+       .filter{
+           background-color: #e3e7eb;
+           height: 23px
+       }
+       .product-id{
+           width: 60px;
+       }
+       .product-name{
+           width: 230px
+       }
+       .unit-price, .quantity{
+           width: 150px
+       }
+       .units-in-stock{
+           width: 160px
+       }
+       .discontinued{
+           width: 80px
+       }
+       #id{
+           width: 25px;
+       }
+       #name{
+           width: 140px;
+       }
+       #price, #units-in-stock{
+           width: 75px;
+       }
+       #quantity{
+           width: 80px
+       }
+       .footer{
+           background-color: #d2d5d9;
+       }
+       button img{
+           position: relative; 
+           right: 5px; 
+           bottom: 1px;
+           width: 15px;
+           height: 15px
+       }
+       button{
+           height: 20px;
+           width: 20px;
+       }
+       .filter-button{
+           position: relative;
+           top: 4px
+       }
+       td span{
+           position: relative;
+           bottom: 4px
+       }
+       #current-page{
+           position: relative;
+           left: 80px;
+           top: 1px
+       }
+       #paging, label[for="paging"]{
+           position: relative;
+           bottom: 4px;
+           left: 10px;
+       }
+       td[class="footer"] button, td[class="footer"] span{
+           margin-left: 5px
+       }
+       .selected-page{
+           border: 1px solid red;
+           position: relative;
+           bottom: 4px;
+           width: 6px;
+           padding: 2px 10px 2px 2px;
+
+           text-justify: inherit;
+       }
+    </style>
+</head>
+<body>
+    <form>
+        <table cellpadding="4">
+            <tbody>
+                <tr>
+                    <td colspan="6" class="header">
+                        Drag a column header and drop it here to group by that columns
+                    </td>
+                </tr>
+                <tr>
+                    <td class="product-id header">
+                        ProductID
+                    </td>
+                    <td class="product-name header">
+                        Product name
+                    </td>
+                    <td class="unit-price header">
+                        Unit price
+                    </td>
+                    <td class="quantity header">
+                        Quantity per unit
+                    </td>
+                    <td class="units-in-stock header">
+                        Units in stoke
+                    </td>
+                    <td class="discontinued header">
+                        Discontinued
+                    </td>
+                <tr>
+                    <td class="product-id filter">
+                        <input id="id"/>
+                    </td>
+                    <td class="product-name filter">
+                        <input id="name"/>
+                    </td>
+                    <td class="unit-price filter">
+                        <input id="price"/>
+                        <button align="center" class="filter-button">
+                             <img src="filter-icon.png"/>
+                        </button>
+                    </td>
+                    <td class="quantity filter">
+                        <input id="quantity"/>
+                    </td>
+                    <td class="units-in-stock filter">
+                        <input id="units-in-stock"/>
+                        <button align="center" class="filter-button">
+                             <img src="filter-icon.png"/>
+                        </button>
+                    <td class="discontinued filter">
+                        <input type="checkbox"/>
+                        <button align="center" class="filter-button">
+                             <img src="filter-icon.png"/>
+                        </button>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        1
+                    </td>
+                    <td class="data-row">
+                        Chai
+                    </td>
+                    <td class="data-row">
+                        $18.00
+                    </td>
+                    <td class="data-row">
+                        10 boxes x 20 bags
+                    </td>
+                    <td class="data-row">
+                        39
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        2
+                    </td>
+                    <td class="data-row">
+                        Chang
+                    </td>
+                    <td class="data-row">
+                        $19.00
+                    </td>
+                    <td class="data-row">
+                        24 - 12 oz bottles
+                    </td>
+                    <td class="data-row">
+                        17
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        3
+                    </td>
+                    <td class="data-row">
+                        Anisee Syrup
+                    </td>
+                    <td class="data-row">
+                        $10.00
+                    </td>
+                    <td class="data-row">
+                        12 - 550 ml bottles
+                    </td>
+                    <td class="data-row">
+                        13
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        4
+                    </td>
+                    <td class="data-row">
+                        Chef Anton's Cajun Seasoning
+                    </td>
+                    <td class="data-row">
+                        $22.00
+                    </td>
+                    <td class="data-row">
+                        48 - 6 oz jars
+                    </td>
+                    <td class="data-row">
+                        53
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        5
+                    </td>
+                    <td class="data-row">
+                        Chef Anton's Gumbo Mix
+                    </td>
+                    <td class="data-row">
+                        $21.35
+                    </td>
+                    <td class="data-row">
+                        36 boxes
+                    </td>
+                    <td class="data-row">
+                        0
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" checked disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        6
+                    </td>
+                    <td class="data-row">
+                        Grandma's Boyenberry Spread
+                    </td>
+                    <td class="data-row">
+                        $25.00
+                    </td>
+                    <td class="data-row">
+                        12 - 8 oz jars
+                    </td>
+                    <td class="data-row">
+                        120
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        7
+                    </td>
+                    <td class="data-row">
+                        Uncle Nob's Organic Dries Pears
+                    </td>
+                    <td class="data-row">
+                        $30.00
+                    </td>
+                    <td class="data-row">
+                        12 - 1 lb pkgs.
+                    </td>
+                    <td class="data-row">
+                        15
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        8
+                    </td>
+                    <td class="data-row">
+                        Northwoods Cranberry Sauce
+                    </td>
+                    <td class="data-row">
+                        $40.00
+                    </td>
+                    <td class="data-row">
+                        12 - 12 oz jars
+                    </td>
+                    <td class="data-row">
+                        6
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        9
+                    </td>
+                    <td class="data-row">
+                        Mishi Kobe Niku
+                    </td>
+                    <td class="data-row">
+                        $97.00
+                    </td>
+                    <td class="data-row">
+                        18 - 500 g pkgs.
+                    </td>
+                    <td class="data-row">
+                        29
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" checked disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="data-row">
+                        10
+                    </td>
+                    <td class="data-row">
+                        Ikura
+                    </td>
+                    <td class="data-row">
+                        $31.00
+                    </td>
+                    <td class="data-row">
+                        12 - 200 ml jars
+                    </td>
+                    <td class="data-row">
+                        31
+                    </td>
+                    <td class="data-row">
+                        <input type="checkbox" disabled/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="footer">
+                        <button class="footer-button" align="center">
+                             <img src="first.png"/>
+                        </button>
+                         <button class="footer-button" align="center">
+                             <img src="right-arrow.png"/>
+                        </button>
+                        <input type="button" class="selected-page" value="1"/>
+                        <span> 2 </span>
+                        <span> 3 </span>
+                        <span> 4 </span>
+                        <span> 5 </span>
+                        <span> 6 </span>
+                        <span> 7 </span>
+                        <span> 8 </span>
+                        <span> 9 </span>
+                        <span> 10 ...</span>
+                        <button class="footer-button" align="center">
+                             <img src="left-arrow.png"/>
+                        </button>
+                         <button class="footer-button" align="center">
+                             <img src="last.png"/>
+                        </button>
+                        <label for="paging">Page size:</label>
+                        <select id="paging">
+                            <option selected>10</option>
+                        </select>
+                    </td>
+                    <td colspan="2" class="footer">
+                        <span id="current-page" align="right">335104 items in 33511 pages</span>
+                    </td>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

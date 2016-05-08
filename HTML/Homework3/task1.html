@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <style>
+       table {
+          border-collapse: collapse;
+       }
+
+       table, th, td {
+          border: 1px solid black;
+       }
+       tr td:nth-child(1) {
+          text-align: center;
+          width: 150px
+       }
+       tr td:nth-child(2) {
+          width: 280px;
+       }
+       textarea{
+          height: 80px;
+          width: 250px
+       }
+       .name{
+           width: 240px
+       }
+       .city{
+           width: 140px
+       }
+       .state{
+           width: 50px
+       }
+       .zip{
+           width: 60px
+       }
+       .country{
+           width: 180px
+       }
+       .countryCode{
+           width: 40px
+       }
+       .operator{
+           width: 35px
+       }
+       .number{
+           width: 100px
+       }
+       .submit{
+           background-color: #d1ede1
+       }
+       #month, #day{
+           width: 20px
+       }
+       #year{
+           width: 50px
+       }
+    </style>
+</head>
+<body>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>Last Name</strong>
+                    </td>
+                    <td>
+                        <input type="text" class="name" value="Nakov"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>First Name</strong>
+                    </td>
+                    <td>
+                        <input type="text" class="name" value="Svetlin"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Address</strong>
+                    </td>
+                    <td>
+                        <textarea>17 Hristo Botev Str.
+floor 3, apt. 12</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>City</strong>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="text" class="city" value="Kaspichan"/>
+                            <label for="state">State</label>
+                            <input type="text" id="state" class="state"/>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Zip/Postal/Copy</strong>
+                    </td>
+                    <td>
+                        <input type="text" class="zip" value="9325"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Country</strong>
+                    </td>
+                    <td>
+                        <select class="country">
+                            <option selected>Bulgaria</option>
+                            <option> UK </option>
+                            <option> US </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Phone(country code, area code, number)</strong>
+                    </td>
+                    <td>
+                        <span>(+</span>
+                        <input type="text" class="countryCode" value="359"/>
+                        <span>)</span>
+                        <input type="text" class="operator" value="88"/>
+                        <input type="text" class="number" value="8334343"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>E-mail</strong>
+                    </td>
+                    <td>
+                        <input type="text" class="name" value="nakov@kaspichan.org"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Birth date</strong>
+                    </td>
+                    <td>
+                        <label for="month">Month</label>
+                        <input type="text" id="month" value="06"/>
+                        <label for="day">Day</label>
+                        <input type="text" id="day" value="14"/>
+                        <label for="year">Year(4 digits)</label>
+                        <input type="text" id="year" value="1980"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Gender</strong>
+                    </td>
+                    <td>
+                        <select>
+                            <option selected>Male</option>
+                            <option>Female</option>
+                            <option>Others</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Starting date</strong>
+                    </td>
+                    <td>
+                        <div>
+                            <input type="radio" value="Spring 2015" checked> Spring 2015 </input>
+                            <input type="radio" value="Summer 2015"> Spring 2015 </input>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <strong>Commnets/Questions</strong>
+                    </td>
+                    <td>
+                        <textarea>Please send me more infromation about the lodging.</textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit">
+                        <div>
+                            <input type="button" value="Submit" </input>
+                            <input type="button" value="Clean This Form" </input>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
